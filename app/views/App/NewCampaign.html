@@ -1,0 +1,58 @@
+{{set . "title" "MailQ New Campaign"}}
+{{template "header.html" .}}
+
+<body>
+
+<div id="wrap">
+  <div id="main">
+    <div class="container">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="jumbotron">
+          <h2>Start telling your story</h2>
+          <p>Set the background, pique their interest</p>
+        </div>
+
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label for="inputEmail1" class="col-lg-2 control-label">Subject</label>
+            <div class="col-lg-10">
+              <input type="email" class="form-control" id="inputSubject1" placeholder="Welcome to ...">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword1" class="col-lg-2 control-label">Content</label>
+            <div class="col-lg-10">
+              <textarea class="form-control" id="inputContent1" rows="10" placeholder="Type your email content here"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword1" class="col-lg-2 control-label">Send...</label>
+            <div class="col-lg-10">
+              <select>
+                <option>when user signs up</option>
+                <option>1 hour after signup</option>
+                <option>1 day after signup</option>
+                <option>2 days after signup</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+              <button type="submit" class="btn btn-success">Save and Continue</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" type="text/css" href="/public/css/bootstrap-select.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/public/js/bootstrap-select.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  $('select').selectpicker();
+});
+</script>
+{{template "footer.html" .}}
